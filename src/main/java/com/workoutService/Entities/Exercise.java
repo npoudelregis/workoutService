@@ -1,6 +1,11 @@
 package com.workoutService.Entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name="exercises")
@@ -16,6 +21,9 @@ public class Exercise {
 
     public Exercise() {
     }
+
+    @OneToMany(mappedBy = "exercise")
+    Set<WorkoutExercises> workouts;
 
     public Long getId() {
         return id;
@@ -47,5 +55,13 @@ public class Exercise {
 
     public void setImg_url(String img_url) {
         this.img_url = img_url;
+    }
+
+    public Set<WorkoutExercises> getWorkouts() {
+        return workouts;
+    }
+
+    public void setWorkouts(Set<WorkoutExercises> workouts) {
+        this.workouts = workouts;
     }
 }
