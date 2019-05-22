@@ -4,7 +4,9 @@ package com.workoutService.Entities;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -22,7 +24,8 @@ public class Workout {
     }
 
     @OneToMany(mappedBy = "workout")
-    Set<WorkoutExercises> exercises;
+    @JsonIgnoreProperties("workouts")
+    private List<WorkoutExercises> exercises = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -48,11 +51,11 @@ public class Workout {
         this.length = length;
     }
 
-    public Set<WorkoutExercises> getExercises() {
+    public List<WorkoutExercises> getExercises() {
         return exercises;
     }
 
-    public void setExercises(Set<WorkoutExercises> exercises) {
+    public void setExercises(List<WorkoutExercises> exercises) {
         this.exercises = exercises;
     }
 }

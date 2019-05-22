@@ -2,6 +2,7 @@ package com.workoutService.Entities;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -16,6 +17,7 @@ public class WorkoutExercises {
 
     @ManyToOne
     @JoinColumn(name = "workout_id")
+    @JsonIgnore
     Workout workout;
 
     @ManyToOne
