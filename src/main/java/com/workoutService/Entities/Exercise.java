@@ -1,21 +1,28 @@
 package com.workoutService.Entities;
 
+import com.fasterxml.jackson.annotation.*;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="exercises")
 public class Exercise {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-
     private Long id;
     private String name;
     private String description;
     private String img_url;
 
-
     public Exercise() {
     }
+
+    @OneToMany(mappedBy = "exercise")
+    @JsonIgnoreProperties("exercise")
+    private List<WorkoutExercises> workouts= new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -47,5 +54,13 @@ public class Exercise {
 
     public void setImg_url(String img_url) {
         this.img_url = img_url;
+    }
+
+    public List<WorkoutExercises> getWorkouts() {
+        return workouts;
+    }
+
+    public void setWorkouts(List<WorkoutExercises> workouts) {
+        this.workouts = workouts;
     }
 }
