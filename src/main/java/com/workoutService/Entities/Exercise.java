@@ -1,8 +1,6 @@
 package com.workoutService.Entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -19,7 +17,6 @@ public class Exercise {
     private String name;
     private String description;
     private String img_url;
-
 
     public Exercise() {
     }
@@ -68,4 +65,3 @@ public class Exercise {
         this.workouts = workouts;
     }
 }
-
