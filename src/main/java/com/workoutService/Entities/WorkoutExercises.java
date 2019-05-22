@@ -2,6 +2,8 @@ package com.workoutService.Entities;
 
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -16,6 +18,7 @@ public class WorkoutExercises {
 
     @ManyToOne
     @JoinColumn(name = "workout_id")
+    @JsonIgnore
     Workout workout;
 
     @ManyToOne
@@ -29,7 +32,6 @@ public class WorkoutExercises {
     public void setId(Long id) {
         this.id = id;
     }
-
     public Workout getWorkout() {
         return workout;
     }
@@ -37,7 +39,6 @@ public class WorkoutExercises {
     public void setWorkout(Workout workout) {
         this.workout = workout;
     }
-
     public Exercise getExercise() {
         return exercise;
     }
