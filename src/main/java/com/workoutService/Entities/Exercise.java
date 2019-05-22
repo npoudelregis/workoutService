@@ -11,7 +11,8 @@ import java.util.Set;
 @Table(name="exercises")
 public class Exercise {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
     private String name;
     private String description;
@@ -22,7 +23,7 @@ public class Exercise {
 
     @OneToMany(mappedBy = "exercise")
     @JsonIgnoreProperties("exercise")
-    private List<WorkoutExercises> workouts= new ArrayList<>();
+    private List<WorkoutExercises> workouts = new ArrayList<>();
 
     public Long getId() {
         return id;
