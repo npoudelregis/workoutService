@@ -14,5 +14,4 @@ public class ExerciseService {
     public Collection<Exercise> index(){
         return exerciseDao.findAll();
     }
-
 }
