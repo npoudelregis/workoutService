@@ -20,7 +20,7 @@ public class WorkoutsController {
     private WorkoutService workoutService;
     private WorkoutDao workoutDao;
 
-    @RequestMapping("/workouts")
+    @GetMapping("/workouts")
     public Collection<Workout> index(){
         return workoutService.index();
     }

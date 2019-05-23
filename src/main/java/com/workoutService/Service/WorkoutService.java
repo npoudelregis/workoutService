@@ -18,11 +18,9 @@ public class WorkoutService {
         return workoutDao.findAll();
     }
 
-    public Workout show(Long id) {
-        Optional<Workout> workout = workoutDao.findById(id);
-        if (workout.isPresent() ) {
-            return workout.get();
-        }
-        return null;
+    public Workout create(Workout workout) {
+        Workout savedWorkout = workoutDao.save(workout);
+        return savedWorkout;
+
     }
 }
