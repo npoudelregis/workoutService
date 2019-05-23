@@ -1,0 +1,12 @@
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Dao/WorkoutDao.java
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/DatabaseConfig.java
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Service/ExerciseService.java
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Controllers/WorkoutsController.java
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Dao/WorkoutExercisesDao.java
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Entities/Workout.java
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Main.java
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Controllers/ExerciseController.java
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Dao/ExerciseDao.java
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Entities/Exercise.java
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Entities/WorkoutExercises.java
+/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Service/WorkoutService.java

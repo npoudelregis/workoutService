@@ -16,4 +16,9 @@ public class WorkoutService {
     public Collection<Workout> index(){
         return workoutDao.findAll();
     }
+
+    public Workout create(Workout workout) {
+        Workout savedWorkout = workoutDao.save(workout);
+        return savedWorkout;
+    }
 }
