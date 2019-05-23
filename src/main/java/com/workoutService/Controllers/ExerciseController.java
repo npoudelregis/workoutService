@@ -21,5 +21,9 @@ public class ExerciseController {
     public Collection<Exercise> index(){
         return exerciseService.index();
     }
+    @GetMapping("/exercises/{id}")
+    public Object getExerciseById(@PathVariable(name= "id") Long id) {
+        return exerciseService.show(id);
+    }
 }
 
