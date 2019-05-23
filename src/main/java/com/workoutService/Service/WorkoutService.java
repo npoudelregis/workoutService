@@ -23,4 +23,12 @@ public class WorkoutService {
         return savedWorkout;
 
     }
+    
+    public Workout show(Long id) {
+        Optional<Workout> workout = workoutDao.findById(id);
+        if (workout.isPresent() ) {
+            return workout.get();
+        }
+        return null;
+    }
 }
