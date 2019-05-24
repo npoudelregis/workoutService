@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS workouts CASCADE;
 DROP TABLE IF EXISTS exercises CASCADE;
 DROP TABLE IF EXISTS workout_exercises CASCADE;
+DROP TABLE IF EXISTS tags CASCADE;
 
 
 CREATE TABLE workouts (
@@ -22,4 +23,9 @@ CREATE TABLE workout_exercises(
     id SERIAL PRIMARY KEY,
     exercise_id bigint REFERENCES exercises (id),
     workout_id  bigint REFERENCES workouts (id)
+);
+
+CREATE TABLE tags(
+    id SERIAL PRIMARY KEY,
+    name character varying(255)
 );
