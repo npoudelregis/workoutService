@@ -24,7 +24,6 @@ public class WorkoutsController {
 
     @PostMapping("/workouts")
     public Workout create(@RequestBody Workout workout) { return workoutService.create(workout); }
-}
 
     @GetMapping("/workouts/{id}")
     public Object getWorkOutById(@PathVariable(name= "id") Long id) {
