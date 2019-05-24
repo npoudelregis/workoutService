@@ -29,3 +29,9 @@ CREATE TABLE tags(
     id SERIAL PRIMARY KEY,
     name character varying(255)
 );
+
+CREATE TABLE exercise_tags(
+    id SERIAL PRIMARY KEY,
+    exercise_id bigint REFERENCES exercises (id),
+    tag_id bigint REFERENCES tags (id)
+);
