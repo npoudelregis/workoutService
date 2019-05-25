@@ -1,6 +1,7 @@
 package com.workoutService.Entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -27,9 +28,28 @@ public class Workout {
     private List<WorkoutExercises> exercises = new ArrayList<>();
 
     @OneToMany(mappedBy = "workout")
-    @JsonIgnoreProperties("workouts")
+    @JsonIgnore
     private List<WorkoutTag> tags = new ArrayList<>();
 
+    @OneToMany(mappedBy = "workout")
+    @JsonIgnoreProperties("workout")
+    private List<Repetition> repetitions = new ArrayList<>();
+
+    public List<WorkoutTag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<WorkoutTag> tags) {
+        this.tags = tags;
+    }
+
+    public List<Repetition> getRepetitions() {
+        return repetitions;
+    }
+
+    public void setRepetitions(List<Repetition> repetitions) {
+        this.repetitions = repetitions;
+    }
 
 
     public Long getId() {
