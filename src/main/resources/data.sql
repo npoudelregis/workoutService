@@ -14,11 +14,6 @@ INSERT INTO tags(id, name) VALUES(1, 'tag 1');
 INSERT INTO tags(id, name) VALUES(2, 'tag 2');
 INSERT INTO tags(id, name) VALUES(3, 'tag 3');
 
-INSERT INTO workout_exercises(id, exercise_id, workout_id) VALUES(1, 1, 1);
-INSERT INTO workout_exercises(id, exercise_id, workout_id) VALUES(2, 1, 2);
-INSERT INTO workout_exercises(id, exercise_id, workout_id) VALUES(3, 2, 2);
-INSERT INTO workout_exercises(id, exercise_id, workout_id) VALUES(4, 3, 4);
-INSERT INTO workout_exercises(id, exercise_id, workout_id) VALUES(5, 4, 3);
 
 INSERT INTO workout_tags(id, workout_id, tag_id) VALUES(1, 1, 1);
 INSERT INTO workout_tags(id, workout_id, tag_id) VALUES(2, 1, 2);

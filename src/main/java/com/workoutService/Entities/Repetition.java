@@ -13,7 +13,6 @@ public class Repetition {
 
     @ManyToOne
     @JoinColumn(name = "exercise_id")
-    @JsonIgnore
     Exercise exercise;
 
     @ManyToOne

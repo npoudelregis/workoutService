@@ -24,10 +24,6 @@ public class Workout {
     }
 
     @OneToMany(mappedBy = "workout")
-    @JsonIgnoreProperties("workouts")
-    private List<WorkoutExercises> exercises = new ArrayList<>();
-
-    @OneToMany(mappedBy = "workout")
     @JsonIgnore
     private List<WorkoutTag> tags = new ArrayList<>();
 
@@ -76,11 +72,4 @@ public class Workout {
         this.length = length;
     }
 
-    public List<WorkoutExercises> getExercises() {
-        return exercises;
-    }
-
-    public void setExercises(List<WorkoutExercises> exercises) {
-        this.exercises = exercises;
-    }
 }
