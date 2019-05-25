@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS exercises CASCADE;
 DROP TABLE IF EXISTS workout_exercises CASCADE;
 DROP TABLE IF EXISTS tags CASCADE;
 DROP TABLE IF EXISTS workout_tags CASCADE;
+DROP TABLE IF EXISTS exercise_tags CASCADE;
 
 
 
@@ -36,5 +37,11 @@ CREATE TABLE tags(
 CREATE TABLE workout_tags(
     id SERIAL PRIMARY KEY,
     workout_id bigint REFERENCES workouts (id),
+    tag_id bigint REFERENCES tags (id)
+);
+
+CREATE TABLE exercise_tags(
+    id SERIAL PRIMARY KEY,
+    exercise_id bigint REFERENCES  exercises (id),
     tag_id bigint REFERENCES tags (id)
 );

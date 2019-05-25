@@ -25,10 +25,10 @@ INSERT INTO workout_tags(id, workout_id, tag_id) VALUES(2, 1, 2);
 INSERT INTO workout_tags(id, workout_id, tag_id) VALUES(3, 1, 3);
 INSERT INTO workout_tags(id, workout_id, tag_id) VALUES(4, 2, 1);
 
-INSERT INTO exercise_tags(id, workout_id, tag_id) VALUES(1, 1, 1);
-INSERT INTO exercise_tags(id, workout_id, tag_id) VALUES(2, 1, 2);
-INSERT INTO exercise_tags(id, workout_id, tag_id) VALUES(3, 1, 3);
-INSERT INTO exercise_tags(id, workout_id, tag_id) VALUES(4, 2, 1);
+INSERT INTO exercise_tags(id, exercise_id, tag_id) VALUES(1, 1, 1);
+INSERT INTO exercise_tags(id, exercise_id, tag_id) VALUES(2, 1, 2);
+INSERT INTO exercise_tags(id, exercise_id, tag_id) VALUES(3, 1, 3);
+INSERT INTO exercise_tags(id, exercise_id, tag_id) VALUES(4, 2, 1);
 
 
 

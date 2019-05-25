@@ -24,6 +24,10 @@ public class Exercise {
     @JsonIgnoreProperties("exercise")
     private List<WorkoutExercises> workouts = new ArrayList<>();
 
+    @OneToMany(mappedBy = "exercise")
+    @JsonIgnoreProperties("exercises")
+    private List<ExerciseTag> tags = new ArrayList<>();
+
     public Long getId() {
         return id;
     }
@@ -62,5 +66,13 @@ public class Exercise {
 
     public void setWorkouts(List<WorkoutExercises> workouts) {
         this.workouts = workouts;
+    }
+
+    public List<ExerciseTag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<ExerciseTag> tags) {
+        this.tags = tags;
     }
 }
