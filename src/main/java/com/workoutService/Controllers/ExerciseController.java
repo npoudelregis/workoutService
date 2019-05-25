@@ -3,10 +3,7 @@ package com.workoutService.Controllers;
 import com.workoutService.Entities.Exercise;
 import com.workoutService.Service.ExerciseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
@@ -24,6 +21,11 @@ public class ExerciseController {
     @GetMapping("/exercises/{id}")
     public Object getExerciseById(@PathVariable(name= "id") Long id) {
         return exerciseService.show(id);
+    }
+
+    @GetMapping("/exercisesByTag")
+    public Collection<Exercise> getExerciseByTags(@RequestParam(name = "tags") String tags) {
+        return exerciseService.exerciseByTags(tags);
     }
 }
 

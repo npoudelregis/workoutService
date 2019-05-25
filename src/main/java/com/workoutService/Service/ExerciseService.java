@@ -24,4 +24,8 @@ public class ExerciseService {
         }
         return null;
     }
+
+    public Collection<Exercise> exerciseByTags(String tags) {
+        return exerciseDao.findExerciseByTags(tags);
+    }
 }

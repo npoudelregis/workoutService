@@ -21,6 +21,8 @@ public class Tag {
     @OneToMany(mappedBy = "tag")
     private List<WorkoutTag> workouts = new ArrayList<>();
 
+    @OneToMany(mappedBy = "tag")
+    private List<ExerciseTag> exercises = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -36,5 +38,21 @@ public class Tag {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<WorkoutTag> getWorkouts() {
+        return workouts;
+    }
+
+    public void setWorkouts(List<WorkoutTag> workouts) {
+        this.workouts = workouts;
+    }
+
+    public List<ExerciseTag> getExercises() {
+        return exercises;
+    }
+
+    public void setExercises(List<ExerciseTag> exercises) {
+        this.exercises = exercises;
     }
 }
