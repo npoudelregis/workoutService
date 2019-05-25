@@ -21,11 +21,7 @@ public class Exercise {
     }
 
     @OneToMany(mappedBy = "exercise")
-    @JsonIgnoreProperties("exercise")
-    private List<WorkoutExercises> workouts = new ArrayList<>();
-
-    @OneToMany(mappedBy = "exercise")
-    @JsonIgnoreProperties("exercises")
+    @JsonIgnore
     private List<ExerciseTag> tags = new ArrayList<>();
 
     public Long getId() {
@@ -58,14 +54,6 @@ public class Exercise {
 
     public void setImg_url(String img_url) {
         this.img_url = img_url;
-    }
-
-    public List<WorkoutExercises> getWorkouts() {
-        return workouts;
-    }
-
-    public void setWorkouts(List<WorkoutExercises> workouts) {
-        this.workouts = workouts;
     }
 
     public List<ExerciseTag> getTags() {

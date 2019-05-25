@@ -1,5 +1,6 @@
 package com.workoutService.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -22,6 +23,7 @@ public class Tag {
     private List<WorkoutTag> workouts = new ArrayList<>();
 
     @OneToMany(mappedBy = "tag")
+    @JsonIgnore
     private List<ExerciseTag> exercises = new ArrayList<>();
 
     public Long getId() {
