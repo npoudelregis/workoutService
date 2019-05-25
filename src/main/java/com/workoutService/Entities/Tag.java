@@ -1,6 +1,10 @@
 package com.workoutService.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="tags")
@@ -13,6 +17,10 @@ public class Tag {
     public Tag() {
 
     }
+
+    @OneToMany(mappedBy = "tag")
+    private List<WorkoutTag> workouts = new ArrayList<>();
+
 
     public Long getId() {
         return id;

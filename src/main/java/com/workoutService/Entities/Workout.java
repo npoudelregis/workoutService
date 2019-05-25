@@ -2,14 +2,10 @@ package com.workoutService.Entities;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "Workouts")
@@ -29,6 +25,12 @@ public class Workout {
     @OneToMany(mappedBy = "workout")
     @JsonIgnoreProperties("workouts")
     private List<WorkoutExercises> exercises = new ArrayList<>();
+
+    @OneToMany(mappedBy = "workout")
+    @JsonIgnoreProperties("workouts")
+    private List<WorkoutTag> tags = new ArrayList<>();
+
+
 
     public Long getId() {
         return id;

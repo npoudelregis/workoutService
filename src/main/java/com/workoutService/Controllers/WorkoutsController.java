@@ -6,6 +6,7 @@ import com.workoutService.Service.WorkoutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Array;
 import java.util.Collection;
 import java.util.Optional;
 
@@ -29,4 +30,10 @@ public class WorkoutsController {
     public Object getWorkOutById(@PathVariable(name= "id") Long id) {
         return workoutService.show(id);
     }
+
+    @GetMapping("/workoutsByTag")
+    public Collection<Workout> getWorkoutByTags(@RequestParam(name= "tags") String tags) {
+        return workoutService.workoutByTags(tags);
+    }
+
 }

@@ -5,6 +5,7 @@ import com.workoutService.Entities.Workout;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Array;
 import java.util.Collection;
 import java.util.Optional;
 
@@ -21,7 +22,6 @@ public class WorkoutService {
     public Workout create(Workout workout) {
         Workout savedWorkout = workoutDao.save(workout);
         return savedWorkout;
-
     }
     
     public Workout show(Long id) {
@@ -30,5 +30,9 @@ public class WorkoutService {
             return workout.get();
         }
         return null;
+    }
+
+    public Collection<Workout> workoutByTags(String tags) {
+        return workoutDao.findWorkoutByTags(tags);
     }
 }
