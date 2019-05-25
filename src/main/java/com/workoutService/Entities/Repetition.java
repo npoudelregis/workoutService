@@ -3,6 +3,7 @@ package com.workoutService.Entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.Optional;
 
 @Entity
 @Table(name= "repetitions")
