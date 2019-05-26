@@ -4,6 +4,8 @@ DROP TABLE IF EXISTS tags CASCADE;
 DROP TABLE IF EXISTS workout_tags CASCADE;
 DROP TABLE IF EXISTS exercise_tags CASCADE;
 DROP TABLE IF EXISTS repetitions CASCADE;
+DROP TABLE IF EXISTS ratings CASCADE;
+
 
 
 
@@ -46,4 +48,10 @@ CREATE TABLE repetitions(
     exercise_id bigint REFERENCES  exercises (id),
     workout_id bigint REFERENCES  workouts (id),
     description character varying(255)
+);
+
+CREATE TABLE ratings(
+    id SERIAL PRIMARY KEY,
+    workout_id bigint REFERENCES  workouts (id),
+    rating float
 );

@@ -30,7 +30,7 @@ public class WorkoutService {
     private RepetitionDao repetitionDao;
 
     public Collection<Workout> index(){
-        return workoutDao.findAll();
+        return workoutDao.getWorkouts();
     }
 
     public Workout create(NewWorkout workout) {
@@ -40,8 +40,8 @@ public class WorkoutService {
         return savedWorkout;
     }
     
-    public Workout show(Long id) {
-        Optional<Workout> workout = workoutDao.findById(id);
+    public Object show(Long id) {
+        Optional<Object> workout = workoutDao.getWorkout(id);
         if (workout.isPresent() ) {
             return workout.get();
         }

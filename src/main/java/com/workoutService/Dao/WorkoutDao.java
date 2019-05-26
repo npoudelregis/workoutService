@@ -18,4 +18,10 @@ public interface WorkoutDao extends JpaRepository<Workout, Long> {
     @Query("SELECT w FROM Workout w JOIN w.tags wt JOIN wt.tag t WHERE LOWER(t.name) = LOWER(:name)")
     Collection<Workout> findWorkoutByTags(@Param("name") String name);
 
+
+    @Query("SELECT w, avg(r.rating) AS avgRatingA FROM Workout w LEFT OUTER JOIN w.ratings r WHERE w.id = :id GROUP BY w.id")
+    Optional<Object> getWorkout(@Param("id") Long id);
+
+    @Query("SELECT w, avg(r.rating) AS avgRating FROM Workout w LEFT OUTER JOIN w.ratings r GROUP BY w.id ORDER BY avg_rating DESC")
+    Collection<Workout> getWorkouts();
 }

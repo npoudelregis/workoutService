@@ -28,3 +28,7 @@ INSERT INTO exercise_tags(id, exercise_id, tag_id) VALUES(4, 2, 1);
 INSERT INTO repetitions(id, exercise_id, workout_id, description) VALUES(1, 1, 1, '30 reps');
 INSERT INTO repetitions(id, exercise_id, workout_id, description) VALUES(2, 2, 1, '32 reps');
 INSERT INTO repetitions(id, exercise_id, workout_id, description) VALUES(3, 3, 1, '100 reps');
+
+INSERT INTO ratings(id, workout_id, rating) VALUES(1, 1, 3.0);
+INSERT INTO ratings(id, workout_id, rating) VALUES(2, 1, 4.0);
+INSERT INTO ratings(id, workout_id, rating) VALUES(3, 1, 5.0);
