@@ -17,6 +17,10 @@ import java.util.Optional;
 
 @Repository
 public interface WorkoutDao extends JpaRepository<Workout, Long> {
+
+    @Query("SELECT w FROM Workout w ORDER BY w.avgrating DESC")
+    Collection<Workout> findAllTopRated();
+
     @Query("SELECT w FROM Workout w JOIN w.tags wt JOIN wt.tag t WHERE LOWER(t.name) = LOWER(:name)")
     Collection<Workout> findWorkoutByTags(@Param("name") String name);
 

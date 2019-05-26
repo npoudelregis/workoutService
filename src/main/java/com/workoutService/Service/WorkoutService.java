@@ -28,7 +28,7 @@ public class WorkoutService {
     private RepetitionDao repetitionDao;
 
     public Collection<Workout> index(){
-        return workoutDao.findAll();
+        return workoutDao.findAllTopRated();
     }
 
     public Workout create(NewWorkout workout) {
