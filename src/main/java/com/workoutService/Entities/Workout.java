@@ -21,6 +21,8 @@ public class Workout {
 
     private Long length;
 
+    private Double avgrating;
+
     public Workout() {
 
     }
@@ -42,6 +44,13 @@ public class Workout {
         return ratings;
     }
 
+    public Double getAvgrating() {
+        return avgrating;
+    }
+
+    public void setAvgrating(Double avgRating) {
+        this.avgrating = avgrating;
+    }
 
     public void setRatings(List<Rating> ratings) {
         this.ratings = ratings;

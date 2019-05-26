@@ -3,9 +3,11 @@ package com.workoutService.Dao;
 import com.workoutService.Entities.Workout;
 import com.workoutService.Entities.Tag;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Array;
 import java.util.Collection;
@@ -19,9 +21,12 @@ public interface WorkoutDao extends JpaRepository<Workout, Long> {
     Collection<Workout> findWorkoutByTags(@Param("name") String name);
 
 
-    @Query("SELECT w, avg(r.rating) AS avgRatingA FROM Workout w LEFT OUTER JOIN w.ratings r WHERE w.id = :id GROUP BY w.id")
-    Optional<Object> getWorkout(@Param("id") Long id);
+    @Query("SELECT avg(r.rating) FROM Workout w LEFT OUTER JOIN w.ratings r WHERE w.id = :id GROUP BY w.id")
+    Double getAvgRating(@Param("id") Long id);
 
-    @Query("SELECT w, avg(r.rating) AS avgRating FROM Workout w LEFT OUTER JOIN w.ratings r GROUP BY w.id ORDER BY avg_rating DESC")
-    Collection<Workout> getWorkouts();
+    @Transactional
+    @Modifying
+    @Query("UPDATE Workout w SET w.avgrating = :newRating where w.id = :id")
+    void updateRating(@Param("newRating") Double newRating, @Param("id") Long id);
+
 }

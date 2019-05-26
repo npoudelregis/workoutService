@@ -1,4 +1,4 @@
-package com.workoutService.PlainObjects;
+package com.workoutService.POJO;
 
 public class NewRepetition {
 

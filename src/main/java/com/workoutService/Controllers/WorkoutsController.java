@@ -1,7 +1,7 @@
 package com.workoutService.Controllers;
 
 import com.workoutService.Dao.WorkoutDao;
-import com.workoutService.PlainObjects.NewWorkout;
+import com.workoutService.POJO.NewWorkout;
 import com.workoutService.Entities.Workout;
 import com.workoutService.Service.WorkoutService;
 import org.springframework.beans.factory.annotation.Autowired;

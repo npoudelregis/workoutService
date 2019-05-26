@@ -1,4 +1,4 @@
-package com.workoutService.PlainObjects;
+package com.workoutService.POJO;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,8 +1,8 @@
-INSERT INTO workouts(id, name, length) VALUES(1, 'Workout 1', 30);
-INSERT INTO workouts(id, name, length) VALUES(2, 'Workout 2', 40);
-INSERT INTO workouts(id, name, length) VALUES(3, 'Workout 3', 50);
-INSERT INTO workouts(id, name, length) VALUES(4, 'Workout 4', 60);
-INSERT INTO workouts(id, name, length) VALUES(5, 'Workout 5', 120);
+INSERT INTO workouts(id, name, length, avgrating) VALUES(1, 'Workout 1', 30, 3.5);
+INSERT INTO workouts(id, name, length, avgrating) VALUES(2, 'Workout 2', 40, 4.5);
+INSERT INTO workouts(id, name, length, avgrating) VALUES(3, 'Workout 3', 50, 2);
+INSERT INTO workouts(id, name, length, avgrating) VALUES(4, 'Workout 4', 60, 5);
+INSERT INTO workouts(id, name, length, avgrating) VALUES(5, 'Workout 5', 120, 1.5);
 
 INSERT INTO exercises(id, name, description, img_url) VALUES(1, 'Exercises 1', 30, 'blank.jpg');
 INSERT INTO exercises(id, name, description, img_url) VALUES(2, 'Exercises 2', 30, 'blank.jpg');

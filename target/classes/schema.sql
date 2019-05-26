@@ -14,7 +14,8 @@ DROP TABLE IF EXISTS ratings CASCADE;
 CREATE TABLE workouts (
     id SERIAL PRIMARY KEY,
     length bigint,
-    name character varying(255)
+    name character varying(255),
+    avgrating FLOAT NOT NULL DEFAULT 0.0
 );
 
 
