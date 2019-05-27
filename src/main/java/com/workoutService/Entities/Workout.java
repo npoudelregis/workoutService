@@ -3,6 +3,8 @@ package com.workoutService.Entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.workoutService.Dao.WorkoutDao;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -19,6 +21,8 @@ public class Workout {
 
     private Long length;
 
+    private Double avgrating;
+
     public Workout() {
 
     }
@@ -30,6 +34,27 @@ public class Workout {
     @OneToMany(mappedBy = "workout")
     @JsonIgnoreProperties("workout")
     private List<Repetition> repetitions = new ArrayList<>();
+
+    @OneToMany(mappedBy = "workout")
+    @JsonIgnoreProperties("workout")
+    private List<Rating> ratings = new ArrayList<>();
+
+    @JsonIgnore
+    public List<Rating> getRatings() {
+        return ratings;
+    }
+
+    public Double getAvgrating() {
+        return avgrating;
+    }
+
+    public void setAvgrating(Double avgRating) {
+        this.avgrating = avgrating;
+    }
+
+    public void setRatings(List<Rating> ratings) {
+        this.ratings = ratings;
+    }
 
     public List<WorkoutTag> getTags() {
         return tags;

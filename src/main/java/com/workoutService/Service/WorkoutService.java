@@ -6,15 +6,13 @@ import com.workoutService.Dao.WorkoutDao;
 import com.workoutService.Entities.Exercise;
 import com.workoutService.Entities.Repetition;
 import com.workoutService.Entities.Workout;
-import com.workoutService.PlainObjects.NewRepetition;
-import com.workoutService.PlainObjects.NewWorkout;
+import com.workoutService.POJO.NewRepetition;
+import com.workoutService.POJO.NewWorkout;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Array;
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -30,7 +28,7 @@ public class WorkoutService {
     private RepetitionDao repetitionDao;
 
     public Collection<Workout> index(){
-        return workoutDao.findAll();
+        return workoutDao.findAllTopRated();
     }
 
     public Workout create(NewWorkout workout) {
@@ -39,7 +37,7 @@ public class WorkoutService {
         createRepetitions(savedWorkout, workout.getExercises());
         return savedWorkout;
     }
-    
+
     public Workout show(Long id) {
         Optional<Workout> workout = workoutDao.findById(id);
         if (workout.isPresent() ) {
