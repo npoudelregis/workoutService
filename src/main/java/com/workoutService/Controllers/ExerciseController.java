@@ -5,6 +5,7 @@ import com.workoutService.Service.ExerciseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 @RestController
@@ -24,8 +25,9 @@ public class ExerciseController {
     }
 
     @GetMapping("/exercisesByTag")
-    public Collection<Exercise> getExerciseByTags(@RequestParam(name = "tags") String tags) {
-        return exerciseService.exerciseByTags(tags);
+    public Collection<Exercise> getExerciseByTags(@RequestParam(name = "tags") ArrayList tags) {
+        Long length = Long.valueOf(tags.size());
+        return exerciseService.exerciseByTags(tags, length);
     }
 }
 
