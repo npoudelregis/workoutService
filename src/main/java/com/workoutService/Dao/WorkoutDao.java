@@ -17,7 +17,7 @@ public interface WorkoutDao extends JpaRepository<Workout, Long> {
     @Query("SELECT w FROM Workout w ORDER BY w.avgrating DESC")
     Collection<Workout> findAllTopRated();
 
-    @Query("SELECT w FROM Workout w JOIN w.tags wt JOIN wt.tag t WHERE LOWER(t.name) IN (:name) GROUP BY w.id HAVING COUNT(w) = :length")
+    @Query("SELECT w FROM Workout w JOIN w.tags wt JOIN wt.tag t WHERE LOWER(t.name) IN (:name) GROUP BY w.id HAVING COUNT(w) = :length ORDER BY w.avgrating DESC")
     Collection<Workout> findWorkoutByTags(@Param("name") ArrayList name, @Param("length") Long length);
 
 
