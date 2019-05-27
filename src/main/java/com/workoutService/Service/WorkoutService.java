@@ -11,6 +11,7 @@ import com.workoutService.POJO.NewWorkout;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
@@ -46,8 +47,8 @@ public class WorkoutService {
         return null;
     }
 
-    public Collection<Workout> workoutByTags(String tags) {
-        return workoutDao.findWorkoutByTags(tags);
+    public Collection<Workout> workoutByTags(ArrayList tags, Long length) {
+        return workoutDao.findWorkoutByTags(tags, length);
     }
 
     private Workout createWorkout(NewWorkout workout) {

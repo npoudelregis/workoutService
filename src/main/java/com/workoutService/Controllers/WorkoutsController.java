@@ -7,6 +7,7 @@ import com.workoutService.Service.WorkoutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 @RestController
@@ -31,8 +32,9 @@ public class WorkoutsController {
     }
 
     @GetMapping("/workoutsByTag")
-    public Collection<Workout> getWorkoutByTags(@RequestParam(name= "tags") String tags) {
-        return workoutService.workoutByTags(tags);
+    public Collection<Workout> getWorkoutByTags(@RequestParam(name= "tags") ArrayList tags) {
+        Long length = Long.valueOf(tags.size());
+        return workoutService.workoutByTags(tags, length);
     }
 
 }

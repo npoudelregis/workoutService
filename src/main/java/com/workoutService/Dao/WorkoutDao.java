@@ -9,11 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.sql.Array;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @Repository
 public interface WorkoutDao extends JpaRepository<Workout, Long> {
@@ -21,8 +17,8 @@ public interface WorkoutDao extends JpaRepository<Workout, Long> {
     @Query("SELECT w FROM Workout w ORDER BY w.avgrating DESC")
     Collection<Workout> findAllTopRated();
 
-    @Query("SELECT w FROM Workout w JOIN w.tags wt JOIN wt.tag t WHERE LOWER(t.name) = LOWER(:name)")
-    Collection<Workout> findWorkoutByTags(@Param("name") String name);
+    @Query("SELECT w FROM Workout w JOIN w.tags wt JOIN wt.tag t WHERE LOWER(t.name) IN (:name) GROUP BY w.id HAVING COUNT(w) = :length")
+    Collection<Workout> findWorkoutByTags(@Param("name") ArrayList name, @Param("length") Long length);
 
 
     @Query("SELECT avg(r.rating) FROM Workout w LEFT OUTER JOIN w.ratings r WHERE w.id = :id GROUP BY w.id")
