@@ -6,6 +6,7 @@ import com.workoutService.Entities.Workout;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Optional;
 
@@ -25,7 +26,7 @@ public class ExerciseService {
         return null;
     }
 
-    public Collection<Exercise> exerciseByTags(String tags) {
-        return exerciseDao.findExerciseByTags(tags);
+    public Collection<Exercise> exerciseByTags(ArrayList tags, Long length) {
+        return exerciseDao.findExerciseByTags(tags, length);
     }
 }
