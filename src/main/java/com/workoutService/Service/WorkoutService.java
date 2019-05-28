@@ -1,11 +1,7 @@
 package com.workoutService.Service;
 
-import com.workoutService.Dao.ExerciseDao;
-import com.workoutService.Dao.RepetitionDao;
-import com.workoutService.Dao.WorkoutDao;
-import com.workoutService.Entities.Exercise;
-import com.workoutService.Entities.Repetition;
-import com.workoutService.Entities.Workout;
+import com.workoutService.Dao.*;
+import com.workoutService.Entities.*;
 import com.workoutService.POJO.NewRepetition;
 import com.workoutService.POJO.NewWorkout;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +24,12 @@ public class WorkoutService {
     @Autowired
     private RepetitionDao repetitionDao;
 
+    @Autowired
+    private TagDao tagDao;
+
+    @Autowired
+    private WorkoutTagDao workoutTagDao;
+
     public Collection<Workout> index(){
         return workoutDao.findAllTopRated();
     }
@@ -35,7 +37,9 @@ public class WorkoutService {
     public Workout create(NewWorkout workout) {
         Workout createdWorkout = createWorkout(workout);
         Workout savedWorkout = workoutDao.save(createdWorkout);
+        workoutDao.updateRating(0.0, savedWorkout.getId());
         createRepetitions(savedWorkout, workout.getExercises());
+        createTags(savedWorkout, workout.getTags());
         return savedWorkout;
     }
 
@@ -70,6 +74,19 @@ public class WorkoutService {
             }
             newRepetition.setDescription(exercises.get(i).getRepetitions());
             repetitionDao.save(newRepetition);
+        }
+        return null;
+    }
+
+    public Void createTags(Workout workout, List<String> tags) {
+        for (int i = 0; i < tags.size(); i++) {
+            Tag newTag = new Tag();
+            newTag.setName(tags.get(i));
+            Tag savedTag = tagDao.save(newTag);
+            WorkoutTag newWorkoutTag = new WorkoutTag();
+            newWorkoutTag.setWorkout(workout);
+            newWorkoutTag.setTag(savedTag);
+            workoutTagDao.save(newWorkoutTag);
         }
         return null;
     }

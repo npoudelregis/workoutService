@@ -15,7 +15,7 @@ CREATE TABLE workouts (
     id SERIAL PRIMARY KEY,
     length bigint,
     name character varying(255),
-    avgrating FLOAT NOT NULL DEFAULT 0.0
+    avgrating FLOAT DEFAULT 0.0
 );
 
 
