@@ -49,3 +49,14 @@ jobs:
             name: Build On Heroku
             command: |
               mvn clean heroku:deploy
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
