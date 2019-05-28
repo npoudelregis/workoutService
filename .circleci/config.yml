@@ -38,7 +38,7 @@ jobs:
       enabled: true
      working_directory: ~/workoutService
      environment:
-       HEROKU_APP: "workoutService"
+       HEROKU_APP: "workoutservice"
      steps:
        - checkout
        - run:
