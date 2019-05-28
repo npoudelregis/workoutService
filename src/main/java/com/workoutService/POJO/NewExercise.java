@@ -1,17 +1,16 @@
 package com.workoutService.POJO;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewWorkout {
-    public NewWorkout() {
+public class NewExercise {
+
+    public NewExercise() {
     }
 
     private String name;
-
-    private Long length;
-
-    private List<NewRepetition> exercises = new ArrayList<>();
-
+    private String description;
+    private String img_url;
     private List<String> tags = new ArrayList<>();
 
     public String getName() {
@@ -22,20 +21,20 @@ public class NewWorkout {
         this.name = name;
     }
 
-    public Long getLength() {
-        return length;
+    public String getDescription() {
+        return description;
     }
 
-    public void setLength(Long length) {
-        this.length = length;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public List<NewRepetition> getExercises() {
-        return exercises;
+    public String getImg_url() {
+        return img_url;
     }
 
-    public void setExercises(List<NewRepetition> exercises) {
-        this.exercises = exercises;
+    public void setImg_url(String img_url) {
+        this.img_url = img_url;
     }
 
     public List<String> getTags() {

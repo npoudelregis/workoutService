@@ -1,6 +1,7 @@
 package com.workoutService.Controllers;
 
 import com.workoutService.Entities.Exercise;
+import com.workoutService.POJO.NewExercise;
 import com.workoutService.Service.ExerciseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,7 @@ public class ExerciseController {
     public Collection<Exercise> index(){
         return exerciseService.index();
     }
+
     @GetMapping("/exercises/{id}")
     public Object getExerciseById(@PathVariable(name= "id") Long id) {
         return exerciseService.show(id);
@@ -29,5 +31,8 @@ public class ExerciseController {
         Long length = Long.valueOf(tags.size());
         return exerciseService.exerciseByTags(tags, length);
     }
+
+    @PostMapping("/exercises")
+    public Exercise create(@RequestBody NewExercise exercise) { return exerciseService.create(exercise); }
 }
 
