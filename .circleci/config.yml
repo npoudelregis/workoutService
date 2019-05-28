@@ -33,22 +33,22 @@ jobs:
       - store_artifacts:
           path: target/workoutService-1.0-SNAPSHOT.jar
 
-    deploy:
-      machine:
-        enabled: true
-      working_directory: ~/workoutService
-      environment:
-        HEROKU_APP: "workoutService"
-      steps:
-        - checkout
-        - run:
-            name: Deploy Master to Heroku
-            command: |
-              git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP.git master
-        - run:
-            name: Build On Heroku
-            command: |
-              mvn clean heroku:deploy
+  deploy:
+     machine:
+      enabled: true
+     working_directory: ~/workoutService
+     environment:
+       HEROKU_APP: "workoutService"
+     steps:
+       - checkout
+       - run:
+           name: Deploy Master to Heroku
+           command: |
+             git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP.git master
+       - run:
+           name: Build On Heroku
+           command: |
+             mvn clean heroku:deploy
 workflows:
   version: 2
   build-and-deploy:
