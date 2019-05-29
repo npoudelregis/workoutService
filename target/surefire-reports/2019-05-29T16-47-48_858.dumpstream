@@ -1,0 +1,54 @@
+# Created at 2019-05-29T16:47:54.345
+Exception in thread "main" java.lang.reflect.InvocationTargetException
+
+# Created at 2019-05-29T16:47:54.347
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+# Created at 2019-05-29T16:47:54.347
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+
+# Created at 2019-05-29T16:47:54.349
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+# Created at 2019-05-29T16:47:54.350
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+
+# Created at 2019-05-29T16:47:54.351
+	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:513)
+
+# Created at 2019-05-29T16:47:54.351
+	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:525)
+
+# Created at 2019-05-29T16:47:54.351
+Caused by: java.lang.RuntimeException: Class java/util/UUID could not be instrumented.
+
+# Created at 2019-05-29T16:47:54.352
+	at org.jacoco.agent.rt.internal_8ff85ea.core.runtime.ModifiedSystemClassRuntime.createFor(ModifiedSystemClassRuntime.java:140)
+
+# Created at 2019-05-29T16:47:54.352
+	at org.jacoco.agent.rt.internal_8ff85ea.core.runtime.ModifiedSystemClassRuntime.createFor(ModifiedSystemClassRuntime.java:101)
+
+# Created at 2019-05-29T16:47:54.352
+	at org.jacoco.agent.rt.internal_8ff85ea.PreMain.createRuntime(PreMain.java:55)
+
+# Created at 2019-05-29T16:47:54.353
+	at org.jacoco.agent.rt.internal_8ff85ea.PreMain.premain(PreMain.java:47)
+
+# Created at 2019-05-29T16:47:54.353
+	... 6 more
+
+# Created at 2019-05-29T16:47:54.353
+Caused by: java.lang.NoSuchFieldException: $jacocoAccess
+
+# Created at 2019-05-29T16:47:54.354
+	at java.base/java.lang.Class.getField(Class.java:2005)
+
+# Created at 2019-05-29T16:47:54.354
+	at org.jacoco.agent.rt.internal_8ff85ea.core.runtime.ModifiedSystemClassRuntime.createFor(ModifiedSystemClassRuntime.java:138)
+
+# Created at 2019-05-29T16:47:54.354
+	... 9 more
+
+# Created at 2019-05-29T16:47:54.355
+/bin/sh: line 1: 33268 Abort trap: 6           /Library/Java/JavaVirtualMachines/openjdk-12.jdk/Contents/Home/bin/java -javaagent:/Users/tymazey/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/tymazey/turing/4module/projects/workoutService/target/jacoco.exec -jar /Users/tymazey/turing/4module/projects/workoutService/target/surefire/surefirebooter12805025984210617667.jar /Users/tymazey/turing/4module/projects/workoutService/target/surefire 2019-05-29T16-47-48_858-jvmRun1 surefire1088754651309132623tmp surefire_011255446287529055145tmp
+

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WorkoutService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">workoutService</a> &gt; <a href="index.source.html" class="el_package">com.workoutService.Service</a> &gt; <span class="el_source">WorkoutService.java</span></div><h1>WorkoutService.java</h1><pre class="source lang-java linenums">package com.workoutService.Service;
+
+import com.workoutService.Dao.*;
+import com.workoutService.Entities.*;
+import com.workoutService.POJO.NewRepetition;
+import com.workoutService.POJO.NewWorkout;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+
+@Service
+<span class="fc" id="L16">public class WorkoutService {</span>
+
+    @Autowired
+    private ExerciseDao exerciseDao;
+
+    @Autowired
+    private WorkoutDao workoutDao;
+
+    @Autowired
+    private RepetitionDao repetitionDao;
+
+    @Autowired
+    private TagDao tagDao;
+
+    @Autowired
+    private WorkoutTagDao workoutTagDao;
+
+    public Collection&lt;Workout&gt; index(){
+<span class="fc" id="L34">        return workoutDao.findAllTopRated();</span>
+    }
+
+    public Workout create(NewWorkout workout) {
+<span class="nc" id="L38">        Workout createdWorkout = createWorkout(workout);</span>
+<span class="nc" id="L39">        Workout savedWorkout = workoutDao.save(createdWorkout);</span>
+<span class="nc" id="L40">        workoutDao.updateRating(0.0, savedWorkout.getId());</span>
+<span class="nc" id="L41">        createRepetitions(savedWorkout, workout.getExercises());</span>
+<span class="nc" id="L42">        createTags(savedWorkout, workout.getTags());</span>
+<span class="nc" id="L43">        return savedWorkout;</span>
+    }
+
+    public Workout show(Long id) {
+<span class="fc" id="L47">        Optional&lt;Workout&gt; workout = workoutDao.findById(id);</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">        if (workout.isPresent() ) {</span>
+<span class="fc" id="L49">            return workout.get();</span>
+        }
+<span class="nc" id="L51">        return null;</span>
+    }
+
+    public Collection&lt;Workout&gt; workoutByTags(ArrayList tags, Long length) {
+<span class="fc" id="L55">        return workoutDao.findWorkoutByTags(tags, length);</span>
+    }
+
+    private Workout createWorkout(NewWorkout workout) {
+<span class="nc" id="L59">        Workout newWorkout = new Workout();</span>
+<span class="nc" id="L60">        newWorkout.setName(workout.getName());</span>
+<span class="nc" id="L61">        newWorkout.setLength(workout.getLength());</span>
+<span class="nc" id="L62">        return newWorkout;</span>
+    }
+
+    public Void createRepetitions(Workout workout, List&lt;NewRepetition&gt; exercises) {
+<span class="nc bnc" id="L66" title="All 2 branches missed.">        for (int i = 0; i &lt; exercises.size(); i++) {</span>
+<span class="nc" id="L67">            Repetition newRepetition = new Repetition();</span>
+<span class="nc" id="L68">            newRepetition.setWorkout(workout);</span>
+<span class="nc" id="L69">            Long exerciseId = exercises.get(i).getId();</span>
+<span class="nc" id="L70">            Optional&lt;Exercise&gt; exercise = exerciseDao.findById(exerciseId);</span>
+<span class="nc bnc" id="L71" title="All 2 branches missed.">            if (exercise.isPresent()) {</span>
+<span class="nc" id="L72">                Exercise foundExercise = exercise.get();</span>
+<span class="nc" id="L73">                newRepetition.setExercise(foundExercise);</span>
+            }
+<span class="nc" id="L75">            newRepetition.setDescription(exercises.get(i).getRepetitions());</span>
+<span class="nc" id="L76">            repetitionDao.save(newRepetition);</span>
+        }
+<span class="nc" id="L78">        return null;</span>
+    }
+
+    public Void createTags(Workout workout, List&lt;String&gt; tags) {
+<span class="nc bnc" id="L82" title="All 2 branches missed.">        for (int i = 0; i &lt; tags.size(); i++) {</span>
+<span class="nc" id="L83">            Tag newTag = new Tag();</span>
+<span class="nc" id="L84">            newTag.setName(tags.get(i));</span>
+<span class="nc" id="L85">            Tag savedTag = tagDao.save(newTag);</span>
+<span class="nc" id="L86">            WorkoutTag newWorkoutTag = new WorkoutTag();</span>
+<span class="nc" id="L87">            newWorkoutTag.setWorkout(workout);</span>
+<span class="nc" id="L88">            newWorkoutTag.setTag(savedTag);</span>
+<span class="nc" id="L89">            workoutTagDao.save(newWorkoutTag);</span>
+        }
+<span class="nc" id="L91">        return null;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
