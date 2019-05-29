@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5297e331-b2f5-4a45-b0a4-09bbfc9de99e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/workoutService/FeatureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/workoutService/FeatureTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/workoutService/WorkoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/workoutService/WorkoutTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/workoutService/FeatureTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/workoutService/FeatureTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/workoutService/WorkoutTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/workoutService/WorkoutTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,7 +34,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="415">
@@ -78,6 +69,15 @@
                 <element signature="e#0#94#1" expanded="true" />
                 <element signature="e#0#62#1" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -125,18 +125,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/workoutService/Dao/WorkoutTagDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -180,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/Entities/Repetition.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/PlainObjects/NewRepetition.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/Entities/Rating.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/POJO/NewRating.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/Dao/RatingDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/Entities/Workout.java" />
@@ -206,6 +193,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/workoutService/WorkoutTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/workoutService/ExerciseTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -301,17 +289,6 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workoutService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workoutService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="surefire-reports" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -465,7 +442,7 @@
       <workItem from="1558808481518" duration="3227000" />
       <workItem from="1558817011640" duration="7535000" />
       <workItem from="1559166849429" duration="270000" />
-      <workItem from="1559167198650" duration="3030000" />
+      <workItem from="1559167198650" duration="3384000" />
     </task>
     <servers />
   </component>
@@ -502,7 +479,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57582000" />
+    <option name="totallyTimeSpent" value="57936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="584" extended-state="0" />
@@ -673,13 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -940,6 +910,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="103" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
         </state>
       </provider>
     </entry>
