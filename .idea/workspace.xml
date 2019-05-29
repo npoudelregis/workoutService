@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5297e331-b2f5-4a45-b0a4-09bbfc9de99e" name="Default Changelist" comment="" />
+    <list default="true" id="5297e331-b2f5-4a45-b0a4-09bbfc9de99e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="103" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="378">
+              <caret line="107" column="42" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -60,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -69,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/workoutService/DatabaseConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="90" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="90" />
+            <state relative-caret-position="105">
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -168,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/Dao/WorkoutDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/Controllers/WorkoutsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/Dao/ExerciseDao.java" />
-        <option value="$PROJECT_DIR$/.circleci/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/Controllers/ExerciseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/POJO/NewTag.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/workoutService/Dao/ExerciseTag.java" />
@@ -184,8 +185,9 @@
         <option value="$PROJECT_DIR$/src/test/java/com/workoutService/FeatureTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/workoutService/WorkoutTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/workoutService/ExerciseTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/.circleci/config.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -231,39 +233,6 @@
               <item name="workoutService" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workoutService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workoutService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workoutService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workoutService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -286,11 +255,6 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workoutService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workoutService" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -444,7 +408,7 @@
       <workItem from="1558808481518" duration="3227000" />
       <workItem from="1558817011640" duration="7535000" />
       <workItem from="1559166849429" duration="270000" />
-      <workItem from="1559167198650" duration="3622000" />
+      <workItem from="1559167198650" duration="3766000" />
     </task>
     <servers />
   </component>
@@ -481,11 +445,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58174000" />
+    <option name="totallyTimeSpent" value="58318000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="584" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -891,24 +854,10 @@
     <entry file="file://$PROJECT_DIR$/target/surefire-reports/2019-05-29T16-47-48_858.dumpstream">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/workoutService/DatabaseConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -917,8 +866,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="90" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="90" />
+        <state relative-caret-position="105">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="107" column="42" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="42" />
         </state>
       </provider>
     </entry>
