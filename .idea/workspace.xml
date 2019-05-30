@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5297e331-b2f5-4a45-b0a4-09bbfc9de99e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RatingTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/workoutService/ExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/workoutService/ExerciseTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+            <state relative-caret-position="119">
+              <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -106,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/workoutService/Entities/Exercise.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="115">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -313,6 +313,11 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="workoutService" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="workoutService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workoutService" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -469,18 +474,14 @@
       <workItem from="1558736502111" duration="1181000" />
       <workItem from="1558808481518" duration="3227000" />
       <workItem from="1558817011640" duration="7535000" />
+      <workItem from="1559166849429" duration="270000" />
+      <workItem from="1559167198650" duration="4188000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FeatureTest - 2019.05.29 at 15h 34m 12s.xml">
-      <configuration name="FeatureTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeatureTest_testGetWorkout - 2019.05.29 at 15h 35m 31s.xml">
-      <configuration name="FeatureTest.testGetWorkout" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FeatureTest - 2019.05.29 at 15h 36m 01s.xml">
-      <configuration name="FeatureTest" configurationId="JUnit" />
+    <history-entry file="WorkoutTest - 2019.05.29 at 16h 21m 15s.xml">
+      <configuration name="WorkoutTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="FeatureTest - 2019.05.29 at 15h 36m 53s.xml">
       <configuration name="FeatureTest" configurationId="JUnit" />
@@ -503,9 +504,15 @@
     <history-entry file="FeatureTest - 2019.05.29 at 15h 51m 24s.xml">
       <configuration name="FeatureTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ExerciseTest - 2019.05.29 at 17h 59m 57s.xml">
+      <configuration name="ExerciseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExerciseTest - 2019.05.29 at 18h 00m 10s.xml">
+      <configuration name="ExerciseTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53998000" />
+    <option name="totallyTimeSpent" value="58740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -521,8 +528,8 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.46144578" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38821137" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.398374" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -563,15 +570,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8-sources.jar!/com/fasterxml/jackson/databind/ser/std/BeanSerializerBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="718" column="25" selection-start-line="718" selection-start-column="25" selection-end-line="718" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/workoutService/Serializers/WorkoutSerializer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/workoutService/Dao/WorkoutExercisesDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/workoutService/Controllers/TestController.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/openjdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.17/tomcat-embed-core-9.0.17-sources.jar!/org/apache/tomcat/util/threads/TaskThread.java">
@@ -912,17 +910,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/workoutService/RatingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/2019-05-29T16-46-53_041-jvmRun1.dumpstream">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/workoutService/Controllers/WorkoutsController.java">
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/2019-05-29T16-46-53_041.dumpstream">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/2019-05-29T16-47-48_858.dumpstream">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/workoutService/DatabaseConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="33" column="33" selection-start-line="33" selection-end-line="34" />
@@ -942,11 +939,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/workoutService/FeatureTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="51" column="57" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
+        <state relative-caret-position="119">
+          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/workoutService/ExerciseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#607#615#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
