@@ -72,5 +72,15 @@ public class FeatureTest{
         Assert.assertEquals("Exercises 1", response.getBody().get("name"));
         Assert.assertEquals(1, response.getBody().get("id"));
     }
+
+    @Test
+    public void testGetExerciseByTag() throws URISyntaxException{
+        final String baseUrl = "http://localhost:"+randomServerPort+"/api/v1/exercisesByTag?tags=tag1,tag2,tag3";
+        URI uri = new URI(baseUrl);
+        ResponseEntity<ArrayList> response
+                = restTemplate.getForEntity(uri, ArrayList.class);
+        Assert.assertEquals(200, response.getStatusCodeValue());
+        Assert.assertEquals(1, response.getBody().size());
+    }
 }
 
