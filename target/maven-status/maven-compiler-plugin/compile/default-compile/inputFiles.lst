@@ -2,7 +2,6 @@
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Service/ExerciseService.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Entities/Rating.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Entities/ExerciseTag.java
-/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Dao/WorkoutTagDao.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Controllers/ExerciseController.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Entities/WorkoutTag.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/POJO/NewRepetition.java
@@ -19,10 +18,8 @@
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Dao/TagDao.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Dao/WorkoutDao.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Controllers/WorkoutRatingsController.java
-/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/POJO/NewExercise.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Entities/Repetition.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Entities/Workout.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Entities/Tag.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/POJO/NewRating.java
-/Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Dao/ExerciseTagDao.java
 /Users/tymazey/turing/4module/projects/workoutService/src/main/java/com/workoutService/Service/WorkoutService.java
