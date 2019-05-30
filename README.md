@@ -53,7 +53,7 @@ And navigate to:
 $ http://localhost:5000
 ```
 
-## Running Test
+### Running Test
 
 You can run the test suit by running:
 ```
@@ -65,7 +65,7 @@ If you would like to see the coverage of the test suit run:
 open target/site/jacoco/index.html
 ```
 
-### Using the Service
+## Using the Service
 
 The service has several API endpoints that return JSON data. Complete documentation of these endpoints along with example request and response cycles visit:
 
@@ -87,7 +87,7 @@ For a high-level overview of the app read below:
 ###### Ratings
 - Create: allows a rating to be submitted for a single workout.
 
-### Schema and TechStack
+## Schema and TechStack
 
 ##### Tech Stack
 
@@ -99,8 +99,6 @@ For a high-level overview of the app read below:
  - JPA/Hibernate
 
 ##### Schema
-
-This is the final schema of the database and how the tables interact with each other:
  -
 
 ### Known Issues
