@@ -1,4 +1,5 @@
 package com.workoutService;
+import com.workoutService.Entities.Exercise;
 import org.json.simple.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -71,6 +72,16 @@ public class FeatureTest{
         Assert.assertEquals(200, response.getStatusCodeValue());
         Assert.assertEquals("Exercises 1", response.getBody().get("name"));
         Assert.assertEquals(1, response.getBody().get("id"));
+    }
+
+    @Test
+    public void  testGetExercisesByTag() throws URISyntaxException{
+        final String baseUrl = "http://localhost:"+randomServerPort+"/api/v1/exercisesByTag?tags=tag1,tag2,tag3";
+        URI uri = new URI(baseUrl);
+        ResponseEntity<ArrayList> response
+                = restTemplate.getForEntity(uri, ArrayList.class);
+        Assert.assertEquals(200, response.getStatusCodeValue());
+        Assert.assertEquals(1, response.getBody().size());
     }
 }
 
